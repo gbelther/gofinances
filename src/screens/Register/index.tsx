@@ -12,6 +12,7 @@ import {
   TransactionsTypes,
 } from "./styles";
 import { TransactionTypeButton } from "../../components/Form/TransactionTypeButton";
+import { CategorySelect } from "../../components/Form/CategorySelect";
 
 export function Register() {
   const [transactionType, setTransactionType] = useState("");
@@ -29,6 +30,7 @@ export function Register() {
       <Form>
         <Fields>
           <Input placeholder="Nome" />
+          <Input placeholder="Preço" />
 
           <TransactionsTypes>
             <TransactionTypeButton
@@ -45,7 +47,7 @@ export function Register() {
             />
           </TransactionsTypes>
 
-          <Input placeholder="Preço" />
+          <CategorySelect title="Categoria" />
         </Fields>
         <Button title="Enviar" />
       </Form>
